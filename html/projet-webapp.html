@@ -376,7 +376,7 @@ def compare():
                     <h4>🧠 Génération du graphique (fonction du modèle)</h4>
 
                     <p>
-                        La génération des graphiques de comparaison est réalisée côté serveur à l’aide d’une
+                        La génération des graphiques de comparaison est réalisée côté serveur à l'aide d'une
                         fonction du modèle. Cette fonction récupère les données filtrées, les structure sous
                         forme de DataFrame, puis génère un graphique interactif avec <strong>Plotly</strong>.
                     </p>
@@ -387,62 +387,72 @@ def compare():
                             <button class="copy-btn">Copier</button>
                         </div>
 
-                        <pre><code class="language-python">
-                    def generate_country_comparison_plot(
-                        countries, 
-                        variable, 
-                        start_year=None, 
-                        end_year=None
-                    ):
-                        """
-                        Génère un graphique linéaire comparant un indicateur
-                        pour plusieurs pays sur une période donnée.
-                        """
+                        <pre><code class="language-python">def generate_country_comparison_plot(
+    countries, 
+    variable, 
+    start_year=None, 
+    end_year=None
+):
+    """
+    Génère un graphique linéaire comparant un indicateur
+    pour plusieurs pays sur une période donnée.
+    """
 
-                        data = get_data_by_countries(
-                            countries, 
-                            variable, 
-                            start_year, 
-                            end_year
-                        )
+    data = get_data_by_countries(
+        countries, 
+        variable, 
+        start_year, 
+        end_year
+    )
 
-                        if not data:
-                            return "Aucune donnée disponible pour cette sélection."
+    if not data:
+        return "Aucune donnée disponible pour cette sélection."
 
-                        # Création du DataFrame
-                        df = pd.DataFrame(
-                            data, 
-                            columns=["Pays", "Année", "Valeur"]
-                        )
+    # Création du DataFrame
+    df = pd.DataFrame(
+        data, 
+        columns=["Pays", "Année", "Valeur"]
+    )
 
-                        title = f"Comparaison : {variable}"
+    title = f"Comparaison : {variable}"
 
-                        # Création du graphique avec Plotly
-                        fig = px.line(
-                            df,
-                            x="Année",
-                            y="Valeur",
-                            color="Pays",
-                            title=title,
-                            markers=True
-                        )
+    # Création du graphique avec Plotly
+    fig = px.line(
+        df,
+        x="Année",
+        y="Valeur",
+        color="Pays",
+        title=title,
+        markers=True
+    )
 
-                        fig.update_layout(
-                            xaxis_title="Année",
-                            yaxis_title=variable.replace("_", " ").title(),
-                            hovermode="x unified",
-                            legend_title="Pays"
-                        )
+    fig.update_layout(
+        xaxis_title="Année",
+        yaxis_title=variable.replace("_", " ").title(),
+        hovermode="x unified",
+        legend_title="Pays"
+    )
 
-                        # Retour HTML pour intégration dans le template
-                        return fig.to_html(full_html=False)
-                        </code></pre>
+    # Retour HTML pour intégration dans le template
+    return fig.to_html(full_html=False)</code></pre>
                     </div>
 
-                    <div class="screenshot-placeholder">
-                        <p>📸 Capture d'écran : Comparaison graphique générée dynamiquement côté serveur</p>
+                    <div class="screenshots-grid">
+                        <div class="screenshot-item">
+                            <img src="../image/MapComapraisonPays.png" alt="Interface de visualisation en map">
+                            <p class="screenshot-caption">Map interactif du monde, indicateur et année</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../image/GraphiqueComparaisonPays.png" alt="Visualisation graphique interactive">
+                            <p class="screenshot-caption">Graphique interactif généré avec Plotly</p>
+                        </div>
+                        <div class="screenshot-item">
+                            <img src="../image/hierachieCompare.png" alt="Comparaison multi-pays">
+                            <p class="screenshot-caption">Comparaison de plusieurs pays Hiérachisé</p>
+                        </div>
                     </div>
-
+                </div>
+            </div>
 
             <!-- Accordion 4 : Projection -->
             <div class="accordion-item">
@@ -509,7 +519,7 @@ def project_indicator(country_code, indicator_id, target_year=2100):
                                 <li>Évolution progressive de l'espérance de vie</li>
                                 <li>Taux de natalité en déclin constant</li>
                             </ul>
-                            <div class="metric">R^2 > 0.85 : Bonne fiabilité</div>
+                            <div class="metric">R² > 0.85 : Bonne fiabilité</div>
                         </div>
                         <div class="limit-card warning">
                             <h5>⚠️ Cas problématiques</h5>
@@ -519,7 +529,7 @@ def project_indicator(country_code, indicator_id, target_year=2100):
                                 <li>Croissance exponentielle ou logistique</li>
                                 <li>Cycles ou variations saisonnières</li>
                             </ul>
-                            <div class="metric">R^2 < 0.70 : Fiabilité limitée</div>
+                            <div class="metric">R² < 0.70 : Fiabilité limitée</div>
                         </div>
                     </div>
 

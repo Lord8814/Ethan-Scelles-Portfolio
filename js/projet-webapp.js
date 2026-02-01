@@ -91,4 +91,90 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Lightbox pour les images
+    createLightbox();
 });
+
+function createLightbox() {
+    // Créer l'élément lightbox
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <button class="lightbox-prev">‹</button>
+            <button class="lightbox-next">›</button>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    // Récupérer tous les screenshots cliquables
+    const screenshots = document.querySelectorAll('.screenshot-item img');
+    let currentIndex = 0;
+    const screenshotsArray = Array.from(screenshots);
+
+    // Fonction pour afficher l'image dans la lightbox
+    function showLightbox(index) {
+        currentIndex = index;
+        const img = screenshotsArray[currentIndex];
+        const caption = img.nextElementSibling?.textContent || '';
+        
+        lightbox.querySelector('.lightbox-image').src = img.src;
+        lightbox.querySelector('.lightbox-caption').textContent = caption;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Fonction pour fermer la lightbox
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Fonction pour naviguer vers l'image précédente
+    function showPrevious() {
+        currentIndex = (currentIndex - 1 + screenshotsArray.length) % screenshotsArray.length;
+        showLightbox(currentIndex);
+    }
+
+    // Fonction pour naviguer vers l'image suivante
+    function showNext() {
+        currentIndex = (currentIndex + 1) % screenshotsArray.length;
+        showLightbox(currentIndex);
+    }
+
+    // Ajouter les événements de clic sur les images
+    screenshots.forEach((img, index) => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => showLightbox(index));
+    });
+
+    // Événements de fermeture
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+
+    // Événements de navigation
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+        e.stopPropagation();
+        showPrevious();
+    });
+    
+    lightbox.querySelector('.lightbox-next').addEventListener('click', (e) => {
+        e.stopPropagation();
+        showNext();
+    });
+
+    // Navigation au clavier
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrevious();
+        if (e.key === 'ArrowRight') showNext();
+    });
+}
