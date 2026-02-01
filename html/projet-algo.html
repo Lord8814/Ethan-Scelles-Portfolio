@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Algorithmique — Scelles Ethan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projet-algo.css">
+    <script src="../js/projet-algo.js" defer></script>
+    <!-- Prism.js -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Scelles Ethan</div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="../index.html#hero">Accueil</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#experience">Parcours</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <div class="breadcrumb">
+                <a href="../index.html#projects">Projets</a>
+                <span>/</span>
+                <span>Analyse Algorithmique</span>
+            </div>
+            <h1>Analyse Algorithmique de Tri</h1>
+            <p class="project-subtitle">Comparaison rigoureuse de performances dans plusieurs langages</p>
+            <div class="project-meta">
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    SAE S102 — 2025
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Python • C • LARP
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Contexte du projet</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <h3>Objectif</h3>
+                    <p>Comparer les performances de plusieurs algorithmes de tri dans différents langages de programmation avec une méthodologie scientifique rigoureuse.</p>
+                </div>
+                <div class="context-card">
+                    <h3>Contrainte principale</h3>
+                    <p>Assurer une comparaison équitable en utilisant des jeux de données strictement identiques pour chaque algorithme et chaque langage.</p>
+                </div>
+                <div class="context-card">
+                    <h3>Enjeu méthodologique</h3>
+                    <p>Concevoir une infrastructure de test permettant de mesurer les temps d'exécution dans des conditions contrôlées (meilleur cas, pire cas, cas moyen).</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Principes clés de la méthodologie</h4>
+                <ul class="principles-list">
+                    <li><strong>Même jeu de données</strong> pour tous les tests</li>
+                    <li><strong>Mêmes tailles de tableaux</strong> à travers les langages</li>
+                    <li><strong>Conditions de test identiques</strong> pour garantir la comparabilité</li>
+                    <li><strong>Prise en compte</strong> des différences entre langages compilés et interprétés</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Ce que j'ai réalisé</h2>
+            <div class="realization-grid">
+                <div class="realization-item">
+                    <div class="realization-number">01</div>
+                    <h3>Implémentation du tri fusion</h3>
+                    <p>Développement de l'algorithme du tri fusion dans trois langages de programmation différents (Python, C, Larp), en respectant la même logique algorithmique tout en adaptant aux spécificités de chaque langage.</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">02</div>
+                    <h3>Conception de l'infrastructure de test</h3>
+                    <p>Participation active à la conception et à l'organisation complète des tests : génération des données, mise en place d'un menu de sélection, choix des tailles de tableaux et automatisation des mesures.</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">03</div>
+                    <h3>Gestion des données de test</h3>
+                    <p>Refonte du système de gestion des données pour garantir leur cohérence entre les différents langages, en passant d'une approche par fichiers CSV à un système de seeds pseudo-aléatoires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Détails techniques -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Explications techniques</h2>
+
+            <!-- Accordion 1 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Implémentation du tri fusion multi-langage</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>Le tri fusion repose sur le principe du <strong>divide and conquer</strong> : diviser le problème en sous-problèmes plus petits, les résoudre récursivement, puis fusionner les solutions.</p>
+                    
+                    <div class="code-comparison">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Python</span>
+                                <button class="copy-btn" data-code="python">Copier</button>
+                            </div>
+                            <pre><code class="language-python">def tri_fusion(tableau):
+    if len(tableau) <= 1:
+        return tableau
+    
+    milieu = len(tableau) // 2
+    gauche = tri_fusion(tableau[:milieu])
+    droite = tri_fusion(tableau[milieu:])
+    
+    return fusion(gauche, droite)
+
+def fusion(gauche, droite):
+    resultat = []
+    i = j = 0
+    
+    while i < len(gauche) and j < len(droite):
+        if gauche[i] <= droite[j]:
+            resultat.append(gauche[i])
+            i += 1
+        else:
+            resultat.append(droite[j])
+            j += 1
+    
+    resultat.extend(gauche[i:])
+    resultat.extend(droite[j:])
+    return resultat</code></pre>
+                        </div>
+
+                        <div class="implementation-notes">
+                            <h4>Spécificités par langage</h4>
+                            <div class="lang-note">
+                                <strong>Python</strong>
+                                <p>Gestion automatique de la mémoire, slicing natif des listes, syntaxe concise. Performance limitée par l'interprétation.</p>
+                            </div>
+                            <div class="lang-note">
+                                <strong>C</strong>
+                                <p>Gestion manuelle de la mémoire (malloc/free), pointeurs pour éviter les copies, compilation native pour des performances optimales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Problématique des données de test</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <div class="problem-solution">
+                        <div class="problem">
+                            <h4>❌ Approche initiale : Fichiers CSV</h4>
+                            <p>Nous avions initialement choisi de stocker les tableaux de test dans des fichiers CSV.</p>
+                            <ul>
+                                <li>Temps de génération et d'importation très important</li>
+                                <li>Fichiers volumineux (plusieurs centaines de Mo pour les grands tableaux)</li>
+                                <li>Problèmes de dépassement mémoire lors du chargement</li>
+                                <li>Complexité inutile dans la logique de récupération des données</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution">
+                            <h4>✅ Solution adoptée : Seeds pseudo-aléatoires</h4>
+                            <p>Au lieu de stocker les tableaux, nous stockons uniquement les <strong>seeds</strong> permettant de les régénérer à l'identique.</p>
+                            <ul>
+                                <li>Fichiers extrêmement légers (quelques Ko)</li>
+                                <li>Génération instantanée des tableaux</li>
+                                <li>Garantie d'identité des données entre les langages</li>
+                                <li>Reproductibilité totale des tests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>Principe technique :</strong> Un générateur pseudo-aléatoire utilise normalement le temps comme seed, produisant des séquences différentes à chaque exécution. En fixant le seed à une valeur constante, on obtient toujours la même séquence de nombres, garantissant ainsi l'identité des tableaux générés.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Garantie de l'identité des données multi-langage</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <h4>Problème rencontré</h4>
+                    <p>Même avec des seeds identiques, <strong>Python n'utilise pas la même formule de génération pseudo-aléatoire</strong> que C et Larp, produisant ainsi des tableaux différents.</p>
+
+                    <h4>Solution technique</h4>
+                    <p>J'ai implémenté un <strong>générateur pseudo-aléatoire personnalisé</strong> basé sur la même formule mathématique utilisée dans les autres langages (Linear Congruential Generator).</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Python — LCG personnalisé</span>
+                            <button class="copy-btn" data-code="lcg">Copier</button>
+                        </div>
+                        <pre><code class="language-python">class LCG:
+import pydoc
+"""
+CRandom.py - Générateur de nombres aléatoires compatible MSVCRT (MinGW/GCC sous Windows)
+
+Ce générateur reproduit le comportement de rand() sous Windows avec GCC/MinGW.
+Il utilise l'algorithme LCG de Microsoft Visual C++ Runtime.
+
+Usage:
+    from CRandom import srand, rand, randint, random
+    
+    srand(1)                    # Initialiser avec une graine
+    nombre = rand()             # Générer un nombre 0-32767
+    entre = randint(0, 1000000) # Entre 0 et 1000000
+"""
+# État interne du générateur
+_state = 0
+
+
+def srand(seed):
+    """
+    Initialise le générateur avec une graine.
+    Compatible avec srand() de MSVCRT (Windows GCC/MinGW).
+    
+    Keyword arguments:
+        seed: Valeur initiale (entier non signé)
+    """
+    global _state
+    _state = seed & 0xFFFFFFFF
+
+
+def rand():
+    """
+    Génère un nombre aléatoire entre 0 et 32767 (RAND_MAX).
+    Compatible avec rand() de MSVCRT (Windows GCC/MinGW).
+    
+    Returns:
+        Entier entre 0 et 32767
+    """
+    global _state
+    # Formule LCG de MSVCRT: state = (state * 214013 + 2531011) mod 2^31
+    _state = ((_state * 214013 + 2531011) & 0x7FFFFFFF)
+    # Retourner les bits 16-30 (divise par 65536, puis masque sur 15 bits)
+    return (_state >> 16) & 0x7FFF
+
+
+def randint(a, b):
+    """
+    Génère un entier aléatoire entre a et b (inclus).
+    
+    Keyword arguments:
+        a: Borne inférieure
+        b: Borne supérieure
+        
+    Returns:
+        Entier entre a et b
+    """
+    if a > b:
+        a, b = b, a
+    range_size = b - a + 1
+    return a + (rand() % range_size)
+
+
+def random():
+    """
+    Génère un nombre flottant entre 0.0 et 1.0.
+    
+    Returns:
+        Float entre 0.0 et 1.0
+    """
+    return rand() / 32767.0
+
+
+# Initialisation par défaut avec seed=1
+srand(1)
+
+pydoc.writedoc("CRandom")</code></pre>
+                    </div>
+
+                    <div class="success-box">
+                        <strong>Résultat :</strong> Cette solution garantit que pour une même seed et une même taille, les trois langages génèrent exactement le même tableau, permettant une comparaison parfaitement équitable.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 4 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Organisation des tests et production des courbes</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>Les tests ont été organisés selon plusieurs critères :</p>
+
+                    <div class="test-params">
+                        <div class="param-card">
+                            <h4>Tailles de tableaux</h4>
+                            <p>De 100 à 100 000 éléments avec paliers progressifs</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>Types de données</h4>
+                            <p>Meilleur cas (trié), pire cas (inversé), cas moyen (aléatoire)</p>
+                        </div>
+                        <div class="param-card">
+                            <h4>Nombre de mesures</h4>
+                            <p>Moyenne sur 10 exécutions pour lisser les variations</p>
+                        </div>
+                    </div>
+
+                    <h4>Défis de visualisation</h4>
+                    <p>Plus la taille des tableaux augmente, plus les temps d'exécution augmentent de manière exponentielle. Pour obtenir des courbes exploitables :</p>
+                    <ul>
+                        <li>Augmentation du nombre de points de mesure pour lisser les résultats</li>
+                        <li>Utilisation d'échelles logarithmiques pour certains graphiques</li>
+                        <li>Séparation des courbes par type de cas (meilleur/pire/moyen)</li>
+                    </ul>
+
+                    <div class="chart-placeholder">
+                        <p>📊 Graphiques de performance disponibles dans le rapport complet</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Résultats -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Résultats et analyses</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">📈</div>
+                    <h3>Tableaux comparatifs</h3>
+                    <p>Production de tableaux détaillant les temps d'exécution pour chaque combinaison langage/taille/cas de test.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">📊</div>
+                    <h3>Courbes de performance</h3>
+                    <p>Visualisation graphique claire de l'impact de l'algorithme, du langage et de la taille des données.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">🎓</div>
+                    <h3>Compréhension concrète</h3>
+                    <p>Application pratique des notions théoriques de complexité algorithmique et de performance logicielle.</p>
+                </div>
+            </div>
+
+            <div class="key-findings">
+                <h3>Enseignements clés</h3>
+                <div class="finding-item">
+                    <strong>Impact du langage</strong>
+                    <p>C montre des performances 10 à 50 fois supérieures à Python pour les grands tableaux</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Complexité observée</strong>
+                    <p>La complexité O(n log n) du tri fusion se vérifie empiriquement, avec une croissance prévisible des temps d'exécution.</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Importance de la méthodologie</strong>
+                    <p>Sans garantie d'identité des données, les comparaisons auraient été biaisées et les conclusions invalides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Compétences développées</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Algorithmique</h4>
+                    <ul>
+                        <li>Implémentation d'algorithmes complexes</li>
+                        <li>Analyse de complexité</li>
+                        <li>Optimisation de code</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Multi-langage</h4>
+                    <ul>
+                        <li>Python, C, Larp</li>
+                        <li>Adaptation aux paradigmes</li>
+                        <li>Gestion de la mémoire</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Méthodologie scientifique</h4>
+                    <ul>
+                        <li>Conception de protocoles de test</li>
+                        <li>Reproductibilité des résultats</li>
+                        <li>Analyse comparative</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Résolution de problèmes</h4>
+                    <ul>
+                        <li>Identification de limitations</li>
+                        <li>Recherche de solutions alternatives</li>
+                        <li>Optimisation des processus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <a href="../index.html#projects" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux projets
+        </a>
+    </section>
+
+</body>
+</html>

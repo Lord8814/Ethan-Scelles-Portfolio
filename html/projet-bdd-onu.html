@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Données ONU — Scelles Ethan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projet-bdd-onu.css">
+    <script src="../js/projet-bdd-onu.js" defer></script>
+    <!-- Prism.js -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Scelles Ethan</div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="../index.html#hero">Accueil</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#experience">Parcours</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <div class="breadcrumb">
+                <a href="../index.html#projects">Projets</a>
+                <span>/</span>
+                <span>Base de Données ONU</span>
+            </div>
+            <h1>Base de Données ONU</h1>
+            <p class="project-subtitle">Conception d'une base de données relationnelle à partir de données démographiques mondiales</p>
+            <div class="project-meta">
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    SAE 1.04 — 2025
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                        <rect x="9" y="9" width="6" height="6"></rect>
+                        <line x1="9" y1="1" x2="9" y2="4"></line>
+                        <line x1="15" y1="1" x2="15" y2="4"></line>
+                        <line x1="9" y1="20" x2="9" y2="23"></line>
+                        <line x1="15" y1="20" x2="15" y2="23"></line>
+                        <line x1="20" y1="9" x2="23" y2="9"></line>
+                        <line x1="20" y1="14" x2="23" y2="14"></line>
+                        <line x1="1" y1="9" x2="4" y2="9"></line>
+                        <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </svg>
+                    SQL • Base de données relationnelle • CSV
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Contexte du projet</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Source des données</h3>
+                    <p>Conception d'une base de données relationnelle à partir de données démographiques mondiales fournies par l'Organisation des Nations Unies.</p>
+                </div>
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Données brutes complexes</h3>
+                    <p>Les données, initialement stockées dans des fichiers CSV et XLSX, nécessitaient un important travail de compréhension, de nettoyage et de structuration.</p>
+                </div>
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h3>Conception relationnelle</h3>
+                    <p>Transformation de données tabulaires en un modèle relationnel normalisé, garantissant l'intégrité et la cohérence pour une exploitation efficace.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Défis du projet</h4>
+                <ul class="principles-list">
+                    <li><strong>Compréhension des données</strong> : Analyse approfondie de la structure et du sens des données ONU</li>
+                    <li><strong>Normalisation</strong> : Identification des entités, relations et dépendances fonctionnelles</li>
+                    <li><strong>Qualité des données</strong> : Garantie de la cohérence des types et de l'intégrité référentielle</li>
+                    <li><strong>Exploitation future</strong> : Base solide pour les applications web et analyses statistiques</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Ce que j'ai réalisé</h2>
+            <div class="realization-grid">
+                <div class="realization-item">
+                    <div class="realization-number">01</div>
+                    <h3>Conception du schéma relationnel</h3>
+                    <p>Participation à la conception complète de la base de données selon un schéma relationnel rigoureux. Identification des entités principales (pays, régions, indicateurs démographiques), définition des relations entre elles, et établissement des clés primaires et étrangères.</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">02</div>
+                    <h3>Traitement et nettoyage des données</h3>
+                    <p>Réalisation d'un important travail de traitement des données pour garantir leur cohérence. Conversion des valeurs numériques stockées en chaînes de caractères vers des types appropriés (INTEGER, REAL), gestion des valeurs manquantes et normalisation des formats.</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">03</div>
+                    <h3>Validation par requêtes SQL</h3>
+                    <p>Rédaction de requêtes SQL complexes pour vérifier l'intégrité et la cohérence des données. Contrôles de contraintes, validation des relations entre tables, et détection d'anomalies potentielles dans les données importées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Détails techniques -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Explications techniques</h2>
+
+            <!-- Accordion 1 : Schéma relationnel -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Conception du schéma relationnel</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>La conception du schéma relationnel a nécessité une analyse approfondie de la structure des données ONU pour identifier les entités principales et leurs relations.</p>
+                    
+                    <h4>Entités principales identifiées</h4>
+                    <div class="entities-grid">
+                        <div class="entity-card">
+                            <h5>Pays (Country)</h5>
+                            <ul>
+                                <li>code_pays (PK)</li>
+                                <li>nom_pays</li>
+                                <li>code_subregion (FK)</li>
+                            </ul>
+                        </div>
+
+                        <div class="entity-card">
+                            <h5>Sous Region (subregion)</h5>
+                            <ul>
+                                <li>code_subregion (PK)</li>
+                                <li>nom_subregion</li>
+                                <li>code_region (FK)</li>
+                            </ul>
+                        </div>
+
+                        <div class="entity-card">
+                            <h5>Région (Region)</h5>
+                            <ul>
+                                <li>code_region (PK)</li>
+                                <li>nom_region</li>
+                                <li>code_continent (FK)</li>
+                            </ul>
+                        </div>
+
+                        <div class="entity-card">
+                            <h5>Donnée (fact_pop)</h5>
+                            <ul>
+                                <li>id_donnee (PK)</li>
+                                <li>code_pays (FK)</li>
+                                <li>year</li>
+                                <li>value....</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">SQL — Création des tables</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-sql">-- Table des pays
+CREATE TABLE Country (
+    code_pays VARCHAR(3) PRIMARY KEY,
+    nom_pays VARCHAR(100) NOT NULL,
+    code_subregion VARCHAR(3),
+    FOREIGN KEY (code_subregion) REFERENCES subregion(code_subregion)
+);
+
+-- Table des sous-régions
+CREATE TABLE subregion (
+    code_subregion VARCHAR(3) PRIMARY KEY,
+    nom_subregion VARCHAR(100) NOT NULL,
+    code_region VARCHAR(3),
+    FOREIGN KEY (code_region) REFERENCES Region(code_region)
+);
+
+-- Table des régions
+CREATE TABLE Region (
+    code_region VARCHAR(3) PRIMARY KEY,
+    nom_region VARCHAR(100) NOT NULL,
+    code_continent VARCHAR(2),
+    FOREIGN KEY (code_continent) REFERENCES Continent(code_continent)
+);
+
+-- Table des données démographiques
+CREATE TABLE fact_pop (
+    id_donnee SERIAL PRIMARY KEY,
+    code_pays VARCHAR(3) NOT NULL,
+    year INTEGER NOT NULL,
+    value REAL,
+    FOREIGN KEY (code_pays) REFERENCES Country(code_pays),
+    UNIQUE (code_pays, year)
+);</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 2 : Nettoyage des données -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Traitement et nettoyage des données</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <h4>Problématiques rencontrées</h4>
+                    
+                    <div class="problem-solution">
+                        <div class="problem">
+                            <h5>Types de données incohérents</h5>
+                            <p>Les fichiers CSV contenaient des valeurs numériques stockées comme du texte, empêchant les calculs et comparaisons.</p>
+                            <ul>
+                                <li>Population : "1234567" (texte)</li>
+                                <li>Taux de natalité : "12.5" (texte)</li>
+                                <li>Présence de séparateurs variables</li>
+                            </ul>
+                        </div>
+
+                        <div class="solution">
+                            <h5>Conversion et validation</h5>
+                            <p>Mise en place d'un processus de conversion systématique avec validation des types.</p>
+                            <ul>
+                                <li>Conversion vers INTEGER ou REAL</li>
+                                <li>Gestion des valeurs NULL</li>
+                                <li>Validation des plages de valeurs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 3 : Requêtes de validation -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Requêtes SQL de validation et vérification</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>Plusieurs requêtes SQL ont été rédigées pour vérifier l'intégrité et la cohérence des données après importation.</p>
+
+                    <h4>Vérification de l'intégrité référentielle</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">SQL — Vérification des références</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-sql">-- Vérifier qu'il n'y a pas de pays sans sous-région
+SELECT c.code_pays, c.nom_pays
+FROM Country c
+LEFT JOIN subregion s ON c.code_subregion = s.code_subregion
+WHERE s.code_subregion IS NULL;
+
+-- Vérifier qu'il n'y a pas de données orphelines
+SELECT d.id_donnee, d.code_pays
+FROM fact_pop d
+LEFT JOIN Country c ON d.code_pays = c.code_pays
+WHERE c.code_pays IS NULL;</code></pre>
+                    </div>
+
+                    <h4>Validation des plages de valeurs</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">SQL — Validation des valeurs</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-sql">-- Détecter les valeurs aberrantes de population
+SELECT c.nom_pays, d.year, d.value
+FROM fact_pop d
+JOIN Country c ON d.code_pays = c.code_pays
+WHERE d.value < 0 OR d.value > 10000000000;
+
+-- Vérifier la cohérence temporelle
+SELECT code_pays, year, COUNT(*) as nb_doublons
+FROM fact_pop
+GROUP BY code_pays, year
+HAVING COUNT(*) > 1;</code></pre>
+                    </div>
+
+                    <h4>Requêtes d'analyse statistique</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">SQL — Analyses</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-sql">-- Top 10 des pays les plus peuplés (dernière année)
+SELECT c.nom_pays, d.value as population, d.year
+FROM fact_pop d
+JOIN Country c ON d.code_pays = c.code_pays
+WHERE d.year = (SELECT MAX(year) FROM fact_pop)
+ORDER BY d.value DESC
+LIMIT 10;
+
+-- Évolution de la population mondiale par décennie
+SELECT 
+    FLOOR(year / 10) * 10 as decennie,
+    SUM(value) as population_mondiale
+FROM fact_pop
+GROUP BY FLOOR(year / 10)
+ORDER BY decennie;</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 4 : Garantie de la qualité -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Garantie de la qualité et de l'intégrité</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <h4>Contraintes d'intégrité</h4>
+                    <p>Plusieurs mécanismes ont été mis en place pour garantir la qualité des données :</p>
+
+                    <div class="quality-grid">
+                        <div class="quality-card">
+                            <h5>Contraintes NOT NULL</h5>
+                            <p>Les champs essentiels (codes pays, années, noms) ne peuvent pas être vides.</p>
+                        </div>
+                        <div class="quality-card">
+                            <h5>Clés étrangères</h5>
+                            <p>Empêchent l'insertion de données référençant des entités inexistantes.</p>
+                        </div>
+                        <div class="quality-card">
+                            <h5>Contraintes UNIQUE</h5>
+                            <p>Évitent les doublons (ex: un seul indicateur par pays et par année).</p>
+                        </div>
+                        <div class="quality-card">
+                            <h5>Contraintes CHECK</h5>
+                            <p>Validation des plages de valeurs acceptables (années, populations positives).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Résultats -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Finalité du projet</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Base de données fiable</h3>
+                    <p>Une base de données robuste, normalisée et cohérente, garantissant l'intégrité des données démographiques de l'ONU.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Prête pour l'exploitation</h3>
+                    <p>Structure optimisée permettant des requêtes performantes et une intégration facile avec des applications web.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Fondation pour projets futurs</h3>
+                    <p>Sert de base solide pour les projets suivants, notamment le développement d'une application web de consultation.</p>
+                </div>
+            </div>
+
+            <div class="key-findings">
+                <h3>Enseignements clés</h3>
+                <div class="finding-item">
+                    <strong>Importance de la modélisation</strong>
+                    <p>Un schéma relationnel bien conçu est essentiel pour garantir la cohérence et l'exploitabilité des données sur le long terme. La normalisation prévient les redondances et les anomalies de mise à jour.</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Qualité des données source</strong>
+                    <p>Les données brutes nécessitent presque toujours un nettoyage approfondi. La validation systématique par requêtes SQL permet de détecter et corriger les incohérences avant qu'elles ne posent problème.</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Rigueur méthodologique</strong>
+                    <p>Le succès d'un projet de base de données repose sur une méthodologie rigoureuse : analyse, conception, implémentation, validation. Chaque étape conditionne la qualité du résultat final.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Compétences développées</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Modélisation de données</h4>
+                    <ul>
+                        <li>Conception de schémas relationnels</li>
+                        <li>Normalisation (1NF, 2NF, 3NF)</li>
+                        <li>Identification d'entités et relations</li>
+                        <li>Définition de clés primaires/étrangères</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>SQL avancé</h4>
+                    <ul>
+                        <li>Création de tables et contraintes</li>
+                        <li>Requêtes complexes (JOIN, GROUP BY)</li>
+                        <li>Optimisation et indexation</li>
+                        <li>Validation et intégrité</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Traitement de données</h4>
+                    <ul>
+                        <li>Nettoyage de données (Python/Pandas)</li>
+                        <li>Conversion et validation de types</li>
+                        <li>Gestion des valeurs manquantes</li>
+                        <li>Import/Export CSV et XLSX</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Qualité et rigueur</h4>
+                    <ul>
+                        <li>Contrôle de la cohérence</li>
+                        <li>Tests et validation</li>
+                        <li>Documentation technique</li>
+                        <li>Méthodologie de projet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <a href="../index.html#projects" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux projets
+        </a>
+    </section>
+
+</body>
+</html>

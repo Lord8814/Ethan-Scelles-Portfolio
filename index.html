@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Scelles Ethan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header class="navbar">
+        <div class="logo">Scelles Ethan</div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!---->
+    <!--Start -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay">
+            <h1>Scelles Ethan</h1>
+            <h2>Étudiant en BUT Informatique</h2>
+        </div>
+        <img src="image/fondPresentation.jpg" alt="Image représentative" class="hero-image">
+    </section>
+<section id="about" class="section">
+    <h2>À propos</h2>
+
+    <div class="about-container">
+
+                <!-- PHOTO -->
+        <div class="about-photo">
+            <img src="image/face.png" alt="Photo de Scelles Ethan">
+        </div>
+
+        <!-- CONTENU TEXTE -->
+        <div class="about-content">
+
+            <nav class="about-nav">
+                <button class="active" data-content="about">À propos</button>
+                <button data-content="languages">Langues</button>
+                <button data-content="soft">Soft skills</button>
+                <button data-content="passions">Passions</button>
+            </nav>
+
+            <div class="about-text">
+                <p id="about-text">
+                    Actuellement étudiant en BUT Informatique, je souhaite me spécialiser dans le 
+                    développement logiciel et l'intelligence artificielle. J'oriente mes études dans 
+                    ce domaine, porté par ma curiosité et mon envie constante d'apprendre. Passionné 
+                    par l'informatique, j'apprécie particulièrement le travail en groupe lors des 
+                    situations professionnalisantes, tout en développant des projets personnels afin 
+                    de renforcer et d'élargir mes compétences. Le développement logiciel et l'IA se 
+                    sont imposés comme une évidence lorsque j'ai compris qu'ils me permettraient de 
+                    créer des outils utiles au quotidien, aussi bien pour moi que pour les autres. 
+                    Concevoir des solutions à des problèmes techniques, automatiser ou simplifier 
+                    des tâches répétitives, tout en recherchant des solutions durables et performantes, 
+                    représente un enjeu majeur pour l'avenir. L'informatique transforme profondément 
+                    notre quotidien et occupe une place toujours plus importante dans la société : 
+                    je souhaite pleinement prendre part à cette évolution.
+                </p>
+                <div class="cv-links">
+                    <a href="document/EthanScelles_CV_Francais.pdf" download target="_blank" class="cv-button">
+                        <span class="cv-icon">📄</span>
+                        <span class="cv-text">CV Français</span>
+                    </a>
+                    <a href="document/EthanScelles_CV_Anglais.pdf" download target="_blank" class="cv-button">
+                        <span class="cv-icon">📄</span>
+                        <span class="cv-text">CV English</span>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</section>
+
+<!-- Compétences Section -->
+<section id="skills" class="section section-alt">
+    <h2>⚙️ Compétences</h2>
+    
+    <div class="skills-container">
+        <!-- Navigation -->
+        <nav class="skills-nav">
+            <button class="active" data-skill="languages">Langages</button>
+            <button data-skill="web">Développement web</button>
+            <button data-skill="database">Bases de données</button>
+            <button data-skill="games">Développement de jeux</button>
+            <button data-skill="tools">Outils & environnements</button>
+        </nav>
+
+        <!-- Contenu des compétences -->
+        <div class="skills-content">
+            <div class="skills-grid" id="skills-grid">
+                <!-- Le contenu sera injecté par JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section">
+    <h2>Parcours & expérience</h2>
+    <div class="timeline">
+
+        <!-- Étape 1 -->
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>Première générale</h3>
+                <span class="date">2023 – 2024</span>
+                <p>LLCE Anglais, Mathématiques, NSI</p>
+            </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>Baccalauréat</h3>
+                <span class="date">2024 – 2025</span>
+                <p>Baccalauréat Scientifique – Mathématiques & NSI</p>
+            </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>BUT Informatique</h3>
+                <span class="date">2025 – Aujourd’hui</span>
+                <p>Première année en cours</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Project -->
+    <section id="projects" class="section section-alt">
+        <h2>Projets</h2>
+        
+        <nav class="projects-nav">
+            <button class="active" data-category="pro">Professionnels</button>
+            <!--<button data-category="perso">Personnels</button>-->
+        </nav>
+
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projets professionnels (affichés par défaut) -->
+            <div class="project-card" data-category="pro">
+                <div class="project-image">
+                    <img src="image/analyseAlgo.png" alt="Analyse algorithmique">
+                </div>
+                <div class="project-content">
+                    <h3>Analyse algorithmique de tri</h3>
+                    <p>Étude comparative des performances de différents algorithmes de tri avec visualisation graphique.</p>
+                    <a href="html/projet-algo.html" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="pro">
+                <div class="project-image">
+                    <img src="image/un-logo.png" alt="Base de données ONU">
+                </div>
+                <div class="project-content">
+                    <h3>Base de données ONU</h3>
+                    <p>Conception et création d'une base de données relationnelle sur l'organisation des Nations Unies.</p>
+                    <a href="html/projet-bdd-onu.html" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="pro">
+                <div class="project-image">
+                    <img src="image/Flask-1.png" alt="Application web">
+                </div>
+                <div class="project-content">
+                    <h3>Application web de navigation</h3>
+                    <p>Développement d'une interface web interactive pour explorer et interroger une base de données.</p>
+                    <a href="html/projet-webapp.html" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <!-- Projets personnels (cachés par défaut) -->
+            <div class="project-card" data-category="perso">
+                <div class="project-image">
+                    <img src="image/projet-perso1.jpg" alt="Projet personnel 1">
+                </div>
+                <div class="project-content">
+                    <h3>Bot Discord</h3>
+                    <p>Création d'un bot Discord pour automatiser des tâches et ajouter des fonctionnalités ludiques.</p>
+                    <a href="projet-perso1.html" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="perso">
+                <div class="project-image">
+                    <img src="image/projet-perso2.jpg" alt="Projet personnel 2">
+                </div>
+                <div class="project-content">
+                    <h3>Jeu de rôle textuel</h3>
+                    <p>Développement d'un système de jeu de rôle en ligne avec gestion des personnages et combats.</p>
+                    <a href="projet-perso2.html" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="perso">
+                <div class="project-image">
+                    <img src="image/projet-perso3.jpg" alt="Projet personnel 3">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio interactif</h3>
+                    <p>Ce portfolio web moderne avec animations et navigation fluide.</p>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

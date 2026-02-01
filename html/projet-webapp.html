@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Web de Navigation — Scelles Ethan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projet-webapp.css">
+    <script src="../js/projet-webapp.js" defer></script>
+    <!-- Prism.js -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css">
+
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">Scelles Ethan</div>
+        <nav>
+            <ul class="navLinks">
+                <li><a href="../index.html#hero">Accueil</a></li>
+                <li><a href="../index.html#about">À propos</a></li>
+                <li><a href="../index.html#skills">Compétences</a></li>
+                <li><a href="../index.html#experience">Parcours</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <div class="breadcrumb">
+                <a href="../index.html#projects">Projets</a>
+                <span>/</span>
+                <span>Application Web de Navigation</span>
+            </div>
+            <h1>Application Web de Navigation</h1>
+            <p class="project-subtitle">Développement d'une interface web interactive pour explorer les données démographiques mondiales</p>
+            <div class="project-meta">
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    SAE 1.01 — 2026
+                </span>
+                <span class="meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    Python • Flask • Sqlite
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Contexte du projet</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3>Application web bêta</h3>
+                    <p>Le projet s'appuie sur une version bêta d'une application web existante qui a servi de base pour comprendre l'architecture et les bonnes pratiques de développement web.</p>
+                </div>
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Architecture MVC</h3>
+                    <p>Application du modèle MVC (Modèle-Vue-Contrôleur) permettant une séparation claire entre la logique métier, les contrôleurs et l'interface utilisateur.</p>
+                </div>
+                <div class="context-card">
+                    <div class="context-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Données démographiques</h3>
+                    <p>Connexion à la base de données ONU pour permettre l'exploration, la comparaison et la visualisation de données démographiques mondiales.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h4>Objectifs du projet</h4>
+                <ul class="principles-list">
+                    <li><strong>Comprendre le modèle MVC</strong> : Séparation des responsabilités entre modèle, vue et contrôleur</li>
+                    <li><strong>Développement full-stack</strong> : Manipulation de données, logique serveur, et interface utilisateur</li>
+                    <li><strong>Fonctionnalités avancées</strong> : Recherche hiérarchique, visualisation graphique, et projections statistiques</li>
+                    <li><strong>Expérience utilisateur</strong> : Interface intuitive et réactive pour l'exploration de données complexes</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Ce que j'ai réalisé</h2>
+            <div class="realization-grid">
+                <div class="realization-item">
+                    <div class="realization-number">01</div>
+                    <h3>Modèle et contrôleurs</h3>
+                    <p>Contribution à la création du modèle de données (requêtes SQL vers  une base de données relationnelle) et des contrôleurs Flask gérant la logique de l'application. Mise en place des routes, validation des entrées utilisateur, et orchestration entre le modèle et les vues.</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">02</div>
+                    <h3>Interface de comparaison</h3>
+                    <p>Développement de pages web permettant de comparer les données démographiques selon différents niveaux hiérarchiques : pays, continent, région et sous-région. Implémentation de filtres dynamiques par indicateur (population, taux de natalité, espérance de vie, etc.).</p>
+                </div>
+                <div class="realization-item">
+                    <div class="realization-number">03</div>
+                    <h3>Système de projection</h3>
+                    <p>Mise en place d'un système de projection des données jusqu'en 2100 basé sur la régression linéaire (scikit-learn). Analyse des limites de cette méthode sur des données non linéaires et documentation des cas d'usage appropriés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Détails techniques -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Fonctionnalités et implémentation</h2>
+
+            <!-- Accordion 1 : Architecture MVC -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Architecture MVC et structure du projet</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>L'application suit le modèle MVC (Modèle-Vue-Contrôleur), un patron de conception qui sépare les responsabilités en trois couches distinctes.</p>
+                    
+                    <div class="mvc-grid">
+                        <div class="mvc-card">
+                            <h5>Modèle (Model)</h5>
+                            <p>Gère l'accès aux données et la logique métier. Contient les requêtes SQL vers  une base de données relationnelle et les fonctions de traitement des données.</p>
+                            <div class="code-example">models/*.py</div>
+                        </div>
+                        <div class="mvc-card">
+                            <h5>Vue (View)</h5>
+                            <p>Présente les données à l'utilisateur. Templates HTML avec Jinja2 pour l'affichage dynamique des informations.</p>
+                            <div class="code-example">templates/*.html</div>
+                        </div>
+                        <div class="mvc-card">
+                            <h5>Contrôleur (Controller)</h5>
+                            <p>Orchestre les interactions entre le modèle et la vue. Routes Flask qui reçoivent les requêtes et retournent les réponses appropriées.</p>
+                            <div class="code-example">controllers/*.py</div>
+                        </div>
+                    </div>
+
+                    <h4>Structure du projet</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Structure des fichiers</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code>projet_webapp/
+│
+├── app.py                  # Point d'entrée de l'application
+├── config.py              # Configuration (base de données, clés secrètes)
+│
+├── models/
+│   └── data_model.py      # Modèle : requêtes SQL et logique métier
+│
+├── controllers/
+│   └── routes.py          # Contrôleurs : routes Flask
+│
+├── templates/
+│   ├── base.html          # Template de base
+│   ├── index.html         # Page d'accueil
+│   ├── compare.html       # Comparaison de données
+│   ├── visualize.html     # Visualisation graphique
+│   └── projection.html    # Projections statistiques
+│
+└── static/
+    ├── css/
+    │   └── style.css
+    └── js/
+        └── charts.js      # Graphiques interactifs</code></pre>
+                    </div>
+
+                    <h4>Exemple de flux MVC</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Python — Contrôleur Flask</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-python">from flask import Flask, render_template, request
+from models.data_model import get_countries, get_indicator_data
+
+app = Flask(__name__)
+
+@app.route('/compare')
+def compare():
+    # 1. Réception de la requête utilisateur
+    continent = request.args.get('continent')
+    indicator = request.args.get('indicator')
+    
+    # 2. Appel au modèle pour récupérer les données
+    countries = get_countries(continent)
+    data = get_indicator_data(countries, indicator)
+    
+    # 3. Transmission des données à la vue
+    return render_template('compare.html', 
+                         countries=countries, 
+                         data=data,
+                         indicator=indicator)</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 2 : Recherche hiérarchique -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Recherche hiérarchique et filtrage</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>L'application permet une navigation hiérarchique à travers les données géographiques, offrant plusieurs niveaux de granularité.</p>
+                    
+                    <h4>Niveaux de sélection</h4>
+                    <div class="hierarchy-grid">
+                        <div class="hierarchy-card">
+                            <div class="hierarchy-number">1</div>
+                            <h5>Par continent</h5>
+                            <p>Sélection de tous les pays d'un continent (Afrique, Asie, Europe, Amériques, Océanie)</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <div class="hierarchy-number">2</div>
+                            <h5>Par région</h5>
+                            <p>Sélection par région géographique (Afrique de l'Ouest, Europe du Nord, Asie du Sud-Est, etc.)</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <div class="hierarchy-number">3</div>
+                            <h5>Par sous-région</h5>
+                            <p>Sélection fine par sous-région ou groupe de développement économique</p>
+                        </div>
+                        <div class="hierarchy-card">
+                            <div class="hierarchy-number">4</div>
+                            <h5>Par pays</h5>
+                            <p>Sélection individuelle de pays spécifiques pour des comparaisons ciblées</p>
+                        </div>
+                    </div>
+
+                    <h4>Filtrage par indicateur</h4>
+                    <div class="indicators-list">
+                        <div class="indicator-item">
+                            <strong>Population totale</strong> — Évolution démographique globale
+                        </div>
+                        <div class="indicator-item">
+                            <strong>Taux de natalité</strong> — Nombre de naissances pour 1000 habitants
+                        </div>
+                        <div class="indicator-item">
+                            <strong>Taux de mortalité</strong> — Nombre de décès pour 1000 habitants
+                        </div>
+                        <div class="indicator-item">
+                            <strong>Espérance de vie</strong> — Âge moyen à la naissance
+                        </div>
+                        <div class="indicator-item">
+                            <strong>Taux de fécondité</strong> — Nombre moyen d'enfants par femme
+                        </div>
+                    </div>
+
+                    <h4>Implémentation SQL</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Python — Requête hiérarchique</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-python">def get_countries_by_hierarchy(level, value):
+    """
+    Récupère les pays selon un niveau hiérarchique
+    level: 'continent', 'region', 'subregion'
+    value: valeur du filtre
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    if level == 'continent':
+        query = """
+            SELECT DISTINCT c.code_pays, c.nom_pays
+            FROM Country c
+            JOIN Region r ON c.code_region = r.code_region
+            JOIN Continent ct ON r.code_continent = ct.code_continent
+            WHERE ct.nom_continent = %s
+            ORDER BY c.nom_pays
+        """
+    elif level == 'region':
+        query = """
+            SELECT c.code_pays, c.nom_pays
+            FROM Country c
+            JOIN Region r ON c.code_region = r.code_region
+            WHERE r.nom_region = %s
+            ORDER BY c.nom_pays
+        """
+    
+    cursor.execute(query, (value,))
+    countries = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    
+    return countries</code></pre>
+                    </div>
+
+                    <div class="screenshot-placeholder">
+                        <p>📸 Capture d'écran : Interface de sélection hiérarchique</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 3 : Visualisation -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Visualisation des données (tableaux et graphiques)</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>L'application propose deux modes de visualisation complémentaires pour faciliter l'analyse et la compréhension des données.</p>
+                    
+                    <div class="visualization-modes">
+                        <div class="viz-mode">
+                            <h5>📊 Mode tableau</h5>
+                            <p>Affichage tabulaire des données avec tri dynamique, filtres et export CSV. Permet une lecture précise des valeurs numériques.</p>
+                            <ul>
+                                <li>Tri par colonne (croissant/décroissant)</li>
+                                <li>Pagination pour grands ensembles de données</li>
+                                <li>Mise en évidence des valeurs extrêmes</li>
+                                <li>Export des données filtrées</li>
+                            </ul>
+                        </div>
+                        <div class="viz-mode">
+                            <h5>📈 Mode graphique</h5>
+                            <p>Visualisation interactive avec Chart.js permettant de comparer visuellement l'évolution des indicateurs dans le temps.</p>
+                            <ul>
+                                <li>Graphiques en ligne pour les tendances temporelles</li>
+                                <li>Graphiques en barres pour les comparaisons</li>
+                                <li>Légende interactive (cacher/afficher pays)</li>
+                                <li>Zoom et navigation temporelle</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>🧠 Génération du graphique (fonction du modèle)</h4>
+
+                    <p>
+                        La génération des graphiques de comparaison est réalisée côté serveur à l’aide d’une
+                        fonction du modèle. Cette fonction récupère les données filtrées, les structure sous
+                        forme de DataFrame, puis génère un graphique interactif avec <strong>Plotly</strong>.
+                    </p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Python — Modèle (Plotly)</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+
+                        <pre><code class="language-python">
+                    def generate_country_comparison_plot(
+                        countries, 
+                        variable, 
+                        start_year=None, 
+                        end_year=None
+                    ):
+                        """
+                        Génère un graphique linéaire comparant un indicateur
+                        pour plusieurs pays sur une période donnée.
+                        """
+
+                        data = get_data_by_countries(
+                            countries, 
+                            variable, 
+                            start_year, 
+                            end_year
+                        )
+
+                        if not data:
+                            return "Aucune donnée disponible pour cette sélection."
+
+                        # Création du DataFrame
+                        df = pd.DataFrame(
+                            data, 
+                            columns=["Pays", "Année", "Valeur"]
+                        )
+
+                        title = f"Comparaison : {variable}"
+
+                        # Création du graphique avec Plotly
+                        fig = px.line(
+                            df,
+                            x="Année",
+                            y="Valeur",
+                            color="Pays",
+                            title=title,
+                            markers=True
+                        )
+
+                        fig.update_layout(
+                            xaxis_title="Année",
+                            yaxis_title=variable.replace("_", " ").title(),
+                            hovermode="x unified",
+                            legend_title="Pays"
+                        )
+
+                        # Retour HTML pour intégration dans le template
+                        return fig.to_html(full_html=False)
+                        </code></pre>
+                    </div>
+
+                    <div class="screenshot-placeholder">
+                        <p>📸 Capture d'écran : Comparaison graphique générée dynamiquement côté serveur</p>
+                    </div>
+
+
+            <!-- Accordion 4 : Projection -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Projections statistiques avec régression linéaire</span>
+                    <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="accordion-content">
+                    <p>Le système de projection permet d'estimer l'évolution future des indicateurs démographiques jusqu'en 2100 en utilisant la régression linéaire de scikit-learn.</p>
+                    
+                    <h4>Principe de la régression linéaire</h4>
+                    <div class="info-box">
+                        <strong>Méthode :</strong> La régression linéaire identifie la tendance générale des données historiques et la prolonge dans le futur. Elle calcule une droite de meilleure approximation (y = ax + b) qui minimise l'erreur entre les valeurs réelles et les valeurs prédites.
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Python — Implémentation de la projection</span>
+                            <button class="copy-btn">Copier</button>
+                        </div>
+                        <pre><code class="language-python">from sklearn.linear_model import LinearRegression
+import numpy as np
+
+def project_indicator(country_code, indicator_id, target_year=2100):
+    """
+    Projette un indicateur jusqu'à target_year
+    """
+    # 1. Récupération des données historiques
+    data = get_historical_data(country_code, indicator_id)
+    years = np.array([d['annee'] for d in data]).reshape(-1, 1)
+    values = np.array([d['valeur'] for d in data])
+    
+    # 2. Création et entraînement du modèle
+    model = LinearRegression()
+    model.fit(years, values)
+    
+    # 3. Génération des années futures
+    future_years = np.arange(years[-1][0] + 1, target_year + 1).reshape(-1, 1)
+    
+    # 4. Prédiction
+    predictions = model.predict(future_years)
+    
+    # 5. Calcul du coefficient de détermination (R²)
+    r2_score = model.score(years, values)
+    
+    return {
+        'years': future_years.flatten().tolist(),
+        'values': predictions.tolist(),
+        'r2_score': r2_score,
+        'coefficient': model.coef_[0],
+        'intercept': model.intercept_
+    }</code></pre>
+                    </div>
+
+                    <h4>Limites et analyse</h4>
+                    <div class="limits-grid">
+                        <div class="limit-card success">
+                            <h5>✅ Cas favorables</h5>
+                            <p>Données avec tendance linéaire stable</p>
+                            <ul>
+                                <li>Croissance démographique régulière</li>
+                                <li>Évolution progressive de l'espérance de vie</li>
+                                <li>Taux de natalité en déclin constant</li>
+                            </ul>
+                            <div class="metric">R^2 > 0.85 : Bonne fiabilité</div>
+                        </div>
+                        <div class="limit-card warning">
+                            <h5>⚠️ Cas problématiques</h5>
+                            <p>Données fortement non linéaires</p>
+                            <ul>
+                                <li>Changements de tendance brusques</li>
+                                <li>Croissance exponentielle ou logistique</li>
+                                <li>Cycles ou variations saisonnières</li>
+                            </ul>
+                            <div class="metric">R^2 < 0.70 : Fiabilité limitée</div>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <strong>Amélioration possible :</strong> Pour les données non linéaires, l'utilisation de modèles polynomiaux, de régression logistique ou de méthodes plus avancées (ARIMA, réseaux de neurones) donnerait des résultats plus précis. Cette limitation a été documentée dans le rapport du projet.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Résultats -->
+    <section class="project-section">
+        <div class="section-container">
+            <h2>Finalité du projet</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Application fonctionnelle</h3>
+                    <p>Une application web complète et opérationnelle permettant d'explorer les données démographiques mondiales de manière intuitive.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Expérience utilisateur</h3>
+                    <p>Interface réactive et intuitive facilitant la navigation, la comparaison et l'analyse de données complexes sans compétences techniques.</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Compétences techniques</h3>
+                    <p>Maîtrise de l'architecture MVC, du développement full-stack avec Flask, et de l'intégration de bibliothèques scientifiques Python.</p>
+                </div>
+            </div>
+
+            <div class="key-findings">
+                <h3>Enseignements clés</h3>
+                <div class="finding-item">
+                    <strong>Architecture MVC</strong>
+                    <p>La séparation des responsabilités entre modèle, vue et contrôleur facilite grandement la maintenance et l'évolution du code. Chaque composant peut être modifié indépendamment sans impacter les autres.</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Importance de l'UX</strong>
+                    <p>Une interface intuitive et réactive est essentielle pour rendre des données complexes accessibles. Les choix de visualisation (tableaux vs graphiques) et la hiérarchie de navigation ont un impact direct sur l'utilisabilité.</p>
+                </div>
+                <div class="finding-item">
+                    <strong>Limites des modèles simples</strong>
+                    <p>La régression linéaire, bien que simple à implémenter, montre rapidement ses limites sur des données non linéaires. L'évaluation de la qualité du modèle (R²) est cruciale pour informer l'utilisateur de la fiabilité des prédictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences développées -->
+    <section class="project-section section-alt">
+        <div class="section-container">
+            <h2>Compétences développées</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Développement web</h4>
+                    <ul>
+                        <li>Framework Flask (Python)</li>
+                        <li>Templates Jinja2</li>
+                        <li>Routes et contrôleurs</li>
+                        <li>HTML/CSS/JavaScript</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Architecture logicielle</h4>
+                    <ul>
+                        <li>Modèle MVC</li>
+                        <li>Séparation des responsabilités</li>
+                        <li>Structure de projet</li>
+                        <li>Bonnes pratiques de code</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Visualisation de données</h4>
+                    <ul>
+                        <li>Chart.js pour graphiques interactifs</li>
+                        <li>Tableaux dynamiques</li>
+                        <li>Interface réactive</li>
+                        <li>UX design</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Régression linéaire (scikit-learn)</li>
+                        <li>Évaluation de modèles (R²)</li>
+                        <li>Analyse de limites</li>
+                        <li>Projections statistiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <a href="../index.html#projects" class="nav-back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Retour aux projets
+        </a>
+    </section>
+
+</body>
+</html>
